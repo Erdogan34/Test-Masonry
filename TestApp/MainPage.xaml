@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="TestApp.MainPage">
+
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Entry></Entry>
+                <!--Isim-->
+                <Entry Grid.Row="1" Visual="Material" Placeholder="Isim"
+                       Grid.Column="0" />
+
+                <!--Countries-->
+                <Picker Grid.Row="1" Visual="Material"
+                        SelectedIndex="0" SelectedItem="Turkey" Title="This is Picker" ItemsSource="{Binding CountryNames}"
+                        Grid.Column="1"> 
+                </Picker>
+
+                <!--Soyisim-->
+                <Entry Grid.Row="2" Visual="Material" Placeholder="Soyisim" 
+                       Grid.Column="0" />
+
+                <!--date-->
+                <DatePicker Grid.Column="1" Grid.Row="2" Visual="Material" />
+
+                <!--button-->
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Margin="5">
+                    <Button Command="{Binding LoginCommand}" Text="Login" HeightRequest="50" Visual="Material"/>
+                </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
