@@ -101,7 +101,7 @@ namespace TestApp
                     {
                         stckRight.Children.Add(frame);
 
-                        SizeRequest columnSizeRequest = frame.Measure(600, 800);
+                        SizeRequest columnSizeRequest = frame.Measure(300, 400);
                         height += columnSizeRequest.Request.Height * 6;
                     }
                 }
